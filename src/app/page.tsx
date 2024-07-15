@@ -1,9 +1,12 @@
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Image from "next/image";
 
 export default function Home() {
   return (
-   <div>
-    Page
+   <div className="bg-slate-50">
+    <section>
+      <MaxWidthWrapper></MaxWidthWrapper>
+    </section>
    </div>
   );
 }
