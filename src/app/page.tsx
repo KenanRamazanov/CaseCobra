@@ -30,7 +30,7 @@ export default function Home() {
                       </li>
                       <li className="flex gap-1.5 items-center text-left">
                       <Check className='h-5 w-5 shrink-0 text-green-600' />
-                      print guarantee
+                      5 year print guarantee
                       </li>
                       <li className="flex gap-1.5 items-center text-left">
                       <Check className='h-5 w-5 shrink-0 text-green-600' />
