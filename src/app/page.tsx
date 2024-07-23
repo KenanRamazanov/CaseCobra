@@ -131,6 +131,18 @@ export default function Home() {
                 <Star className="h-5 w-5 text-green-600 fill-green-600" />
                 <Star className="h-5 w-5 text-green-600 fill-green-600" />
               </div>
+
+              <div className="text-lg leading-8">
+                  <p>
+                  "The case feels durable and I even got a compliment on the
+                  design. Had the case for two and a half months now and{' '}
+                  <span className='p-0.5 bg-slate-800 text-white'>
+                    the image is super clear
+                  </span>
+                  , on the case I had before, the image started fading into
+                  yellow-ish color after a couple weeks. Love it."
+                  </p>
+              </div>
             </div>
           </div>
         </MaxWidthWrapper>
