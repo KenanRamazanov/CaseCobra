@@ -199,7 +199,9 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
 
+        <div className="pt-18">
         
+        </div>
       </section>
     </div>
   );
