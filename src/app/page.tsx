@@ -143,6 +143,13 @@ export default function Home() {
                   yellow-ish color after a couple weeks. Love it."
                   </p>
               </div>
+              <div className="flex gap-4 mt-2">
+              <img
+                  className='rounded-full h-12 w-12 object-cover'
+                  src='/users/user-1.png'
+                  alt='user'
+                />
+              </div>
             </div>
           </div>
         </MaxWidthWrapper>
