@@ -75,39 +75,38 @@ function ReviewColumn({
   );
 }
 
-interface ReviewProps extends HTMLAttributes<HTMLDivElement>{
-  imgSrc: string
+interface ReviewProps extends HTMLAttributes<HTMLDivElement> {
+  imgSrc: string;
 }
 
 function Review({ imgSrc, className, ...props }: ReviewProps) {
   const POSSIBLE_ANIMATION_DELAYS = [
-    '0s',
-    '0.1s',
-    '0.2s',
-    '0.3s',
-    '0.4s',
-    '0.5s',
-  ]
+    "0s",
+    "0.1s",
+    "0.2s",
+    "0.3s",
+    "0.4s",
+    "0.5s",
+  ];
 
   const animationDelay =
     POSSIBLE_ANIMATION_DELAYS[
       Math.floor(Math.random() * POSSIBLE_ANIMATION_DELAYS.length)
-    ]
+    ];
 
   return (
     <div
       className={cn(
-        'animate-fade-in rounded-[2.25rem] bg-white p-6 opacity-0 shadow-xl shadow-slate-900/5',
+        "animate-fade-in rounded-[2.25rem] bg-white p-6 opacity-0 shadow-xl shadow-slate-900/5",
         className
       )}
       style={{ animationDelay }}
-      {...props}>
+      {...props}
+    >
       <Phone imgSrc={imgSrc} />
     </div>
-  )
+  );
 }
-
-
 
 function ReviewGrid() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -133,19 +132,19 @@ function ReviewGrid() {
             }
             msPerPixel={10}
           />
-           <ReviewColumn
-             reviews={[...column2, ...column3[1]]}
-             className='hidden md:block'
-             reviewClassName={(reviewIndex) =>
-               reviewIndex >= column2.length ? 'lg:hidden' : ''
-             }
-             msPerPixel={15}
-          /> <ReviewColumn
-          reviews={column3.flat()}
-          className='hidden md:block'
-          msPerPixel={10}
-        />
-
+          <ReviewColumn
+            reviews={[...column2, ...column3[1]]}
+            className="hidden md:block"
+            reviewClassName={(reviewIndex) =>
+              reviewIndex >= column2.length ? "lg:hidden" : ""
+            }
+            msPerPixel={15}
+          />
+          <ReviewColumn
+            reviews={column3.flat()}
+            className="hidden md:block"
+            msPerPixel={10}
+          />
         </>
       ) : null}
     </div>
