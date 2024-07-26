@@ -4,6 +4,7 @@ import { HTMLAttributes, useEffect, useRef, useState } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Phone from "./Phone";
 
 const PHONES = [
   "/testimonials/1.jpg",
@@ -132,6 +133,19 @@ function ReviewGrid() {
             }
             msPerPixel={10}
           />
+           <ReviewColumn
+             reviews={[...column2, ...column3[1]]}
+             className='hidden md:block'
+             reviewClassName={(reviewIndex) =>
+               reviewIndex >= column2.length ? 'lg:hidden' : ''
+             }
+             msPerPixel={15}
+          /> <ReviewColumn
+          reviews={column3.flat()}
+          className='hidden md:block'
+          msPerPixel={10}
+        />
+
         </>
       ) : null}
     </div>
