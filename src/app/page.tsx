@@ -206,7 +206,11 @@ export default function Home() {
       </section>
 
       <section>
-        <MaxWidthWrapper className="py-24"></MaxWidthWrapper>
+        <MaxWidthWrapper className="py-24">
+          <div>
+            
+          </div>
+        </MaxWidthWrapper>
       </section>
     </div>
   );
