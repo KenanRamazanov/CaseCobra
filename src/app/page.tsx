@@ -207,7 +207,7 @@ export default function Home() {
 
       <section>
         <MaxWidthWrapper className="py-24">
-          <div className="">
+          <div className="flex">
 
           </div>
         </MaxWidthWrapper>
