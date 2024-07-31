@@ -34,7 +34,8 @@ const Page = () => {
               <div className="h-full w-full flex-1 flex flex-col items-center justify-center"
               {...getRootProps()}
               >
-
+              <input {...getInputProps()} />
+            
               </div>
           )}
         </Dropzone>
