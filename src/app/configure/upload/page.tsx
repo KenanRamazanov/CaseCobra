@@ -1,12 +1,13 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Image, Loader2, MousePointerSquareDashed } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import Dropzone, { FileRejection } from "react-dropzone";
 
 const Page = () => {
   const [isDragOver, setIsDragOver] = useState<boolean>(false);
-
+  const isUploading = false;
+  const [isPending, startTransition] = useTransition();
   const onDropRejected = () => {};
   const onDropAccepted = () => {};
 
@@ -39,7 +40,7 @@ const Page = () => {
               <input {...getInputProps()} />
               {isDragOver ? (
                 <MousePointerSquareDashed className="h-6 w-6 text-zinc-500 mb-2" />
-              ) : false ? (
+              ) : isUploading ? (
                 <Loader2 className="animate-spin h-6 w-6 text-zinc-500 mb-2" />
               ) : (
                 <Image className=" h-6 w-6  text-zinc-500 mb-2" />
