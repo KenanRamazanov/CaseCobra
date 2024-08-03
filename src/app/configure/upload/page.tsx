@@ -56,11 +56,18 @@ const Page = () => {
                    />
                   </div>
                 ) : isPending ? (
-                  <div></div>
+                  <div className='flex flex-col items-center'>
+                    <p>Redirecting, please wait...</p>
+                  </div>
                 ) : isDragOver ? (
-                  <span></span>
+                  <p>
+                  <span className='font-semibold'>Drop file</span> to upload
+                </p>
                 ) : (
-                  <span></span>
+                  <p>
+                    <span className='font-semibold'>Click to upload</span> or
+                    drag and drop
+                  </p>
                 )}
               </div>
             </div>
