@@ -47,7 +47,9 @@ const Page = () => {
               )}
               <div className="flex flex-col justify-center mb-2 text-sm text-zinc-700">
                 {isUploading ? (
-                  <div></div>
+                  <div className="flex flex-col items-center">
+                   <p>Uploading...</p>
+                  </div>
                 ) : isPending ? (
                   <div></div>
                 ) : isDragOver ? (
