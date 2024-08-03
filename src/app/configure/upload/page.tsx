@@ -1,4 +1,5 @@
 "use client";
+import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { Image, Loader2, MousePointerSquareDashed } from "lucide-react";
 import React, { useState, useTransition } from "react";
@@ -10,7 +11,7 @@ const Page = () => {
   const [isPending, startTransition] = useTransition();
   const onDropRejected = () => {};
   const onDropAccepted = () => {};
-
+  const [uploadProgress, setUploadProgress] = useState<number>(0)
   return (
     <div
       className={cn(
@@ -49,6 +50,10 @@ const Page = () => {
                 {isUploading ? (
                   <div className="flex flex-col items-center">
                    <p>Uploading...</p>
+                   <Progress
+                    value={uploadProgress}
+                    className='mt-2 w-40 h-2 bg-gray-300'
+                   />
                   </div>
                 ) : isPending ? (
                   <div></div>
