@@ -13,7 +13,7 @@ const Page = () => {
   const [isPending, startTransition] = useTransition();
 const router = useRouter()
 
-  const { } = useUploadThing('imageUploader', {
+  const { startUpload} = useUploadThing('imageUploader', {
     onClientUploadComplete: ([data]) => {
       const configId = data.serverData.configId
       startTransition(() => {
@@ -26,7 +26,11 @@ const router = useRouter()
   })
   
   const onDropRejected = () => {};
-  const onDropAccepted = () => {};
+  const onDropAccepted = (acceptedFiles: File[]) => {
+    startUpload(acceptedFiles, { configId: undefined })
+
+    setIsDragOver(false)
+  }
   const [uploadProgress, setUploadProgress] = useState<number>(0)
   return (
     <div
@@ -39,8 +43,8 @@ const router = useRouter()
     >
       <div className="relative flex flex-1 flex-col items-center justify-center w-full">
         <Dropzone
-          onDropRejected={onDropAccepted}
-          onDropAccepted={onDropRejected}
+          onDropRejected={onDropRejected}
+          onDropAccepted={onDropAccepted}
           accept={{
             "image/png": [".png"],
             "image/jpeg": [".jpeg"],
