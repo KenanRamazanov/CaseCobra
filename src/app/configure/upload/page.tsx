@@ -25,7 +25,13 @@ const router = useRouter()
     },
   })
   
-  const onDropRejected = () => {};
+  const onDropRejected = (rejectedFiles: FileRejection[]) => {
+    const [file] = rejectedFiles
+
+    setIsDragOver(false)
+    
+
+  };
   const onDropAccepted = (acceptedFiles: File[]) => {
     startUpload(acceptedFiles, { configId: undefined })
 
