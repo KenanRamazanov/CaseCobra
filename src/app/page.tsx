@@ -257,8 +257,7 @@ export default function Home() {
               <Check className="h-5 w-5 text-green-600 inline mr-1.5" />5 year
               print warranty
             </li>
-       
-       
+
             <div className="flex justify-center">
               <Link
                 className={buttonVariants({
