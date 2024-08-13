@@ -42,9 +42,26 @@ const Stpes = () => {
                     'bg-primary': isCompleted,
                   }
                 )}
-                aria-hidden='true'>
-
+                aria-hidden='true'/>
+                
+                <span className={cn(
+                  i !== 0 ? 'lg:pl-9' : '',
+                  'flex items-center px-6 py-4 text-sm font-medium'
+                )}>
+                  <span className="flex-shrink-0 ">
+                  <img
+                    src={imgPath}
+                    className={cn(
+                      'flex h-20 w-20 object-contain items-center justify-center',
+                      {
+                        'border-none': isCompleted,
+                        'border-zinc-700': isCurrent,
+                      }
+                    )}
+                  />
+                  </span>
                 </span>
+            
             </div>
           </li>
         );
