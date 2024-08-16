@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Page = async () => {
-  return (
-    <div>Page</div>
-  )
+
+interface PageProps {
+  searchParams: {
+    [key: string]: string | string[] | undefined;
+  };
 }
 
-export default Page
+const Page = async ({ searchParams }: PageProps) => {
+
+  const { id } = searchParams
+  return <div>{id}</div>;
+};
+
+export default Page;
